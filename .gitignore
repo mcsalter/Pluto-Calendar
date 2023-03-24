@@ -1,0 +1,5 @@
+pluto-env/*
+pluto-env/pluto/.mypy_cache
+pluto-env/pluto/__pycache__
+!pluto-env/pluto
+!pluto-env/Pipfile
