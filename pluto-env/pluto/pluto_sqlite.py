@@ -6,9 +6,8 @@ import pluto_classes
 def initialize_sqlite3() -> bool:
     return False
 
-def
 
-def file_load(filename: str) -> typing.Tuple[event_list, list[Board]]:
+def file_load(filename: str, pluto: pluto_classes.Pluto) -> typing.Tuple[pluto_classes.event_list, list[pluto_classes.Board]]:
     """
     Loads a data file, and extracts the content into the appropriate lists.
     @param filename : str                    -- name of file to load
@@ -17,10 +16,10 @@ def file_load(filename: str) -> typing.Tuple[event_list, list[Board]]:
 
     boardlist = []
 
-    tmp = event_list(edited = False)
+    tmp = pluto_classes.event_list(edited = False)
     return (tmp, boardlist)
 
-def file_save(filename: str, pluto: Pluto) -> typing.Tuple[bool, str]:
+def file_save(filename: str, pluto: pluto_classes.Pluto) -> typing.Tuple[bool, str]:
     """
     Writes the current events to a specific data file. Currently planned to be using s-expressions.
     @param filename : str                       -- name of file to be saved to.
@@ -28,6 +27,5 @@ def file_save(filename: str, pluto: Pluto) -> typing.Tuple[bool, str]:
     @returns        : (bool, str)               -- true for save success, false for save fail -- str for failure message.
     """
     # code to find only the events that have been edited
-    with file as open(filename, "r+"):
-        # code to append && edit existing events
+    # code to append && edit existing events
     return

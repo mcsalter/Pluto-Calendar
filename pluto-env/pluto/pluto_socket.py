@@ -14,9 +14,9 @@ import sys
 
 import pluto_classes
 
-AF_INET_HOST = "127.0.0.1"
-AF_INET_PORT = 12000
-DEFAULT_SOCK_TYPE = socket.AF_INET
+#AF_INET_HOST = "127.0.0.1"
+#AF_INET_PORT = 12000
+#DEFAULT_SOCK_TYPE = socket.AF_INET
 
 AF_UNIX_FILE = "/tmp/PLUTO"
 
@@ -36,10 +36,14 @@ def socket_handler(port_tuple: tuple = (socket.AF_INET, ("127.0.0.1", 12000))):
     """
     Command to await a socket, and spin up a socket_communicate thread for each new socket connection.
     Currently this only supports AF_INET and AF_UNIX.
+    Note: when calling information from Pluto.pluto_config -- cast default_socket through `pluto_socket.socket.AddressFamily['Pluto.pluto_config.default_socket']` to get it in enum form
+
     @param port_tuple: tuple of (socket.Address_Family, (connection specs)) -- defaults to localhost port 12000
     @return:
          0 -- operations successful
         -1 -- error found
+
+
     """
     with socket.socket(port_tuple[0], socket.SOCK_STREAM) as soc:
         if port_tuple[0] == socket.AF_INET:

@@ -1,0 +1,9 @@
+---  # yaml document beginning
+# comment syntax
+
+sqlite3_initialized: False
+sqlite3_file_name: "pluto_sql.db"
+respect_XDG: True
+default_socket: "AF_INET"
+default_socket_name: "127.0.0.1"
+default_socket_address: 12000

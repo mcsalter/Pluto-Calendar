@@ -15,9 +15,7 @@ _Table of Contents_
 Pluto is the back end project that manages the calendar databases.
 - Pluto connects to a network socket (for now, socket 12000).
   - FUTURE: support for unix sockets and the customization of which is being used.
-- Pluto loads and manages the various XML files containing the calendar events.
-  - To be decided if this is just XML files or another database).
-  - currently looking towards SQL and MongoDB
+- Pluto loads and manages the SQL database files containing the calendar events.
 - Pluto will send to the gui software alerts that a notification should be sent.
 - Pluto will have to provide security mechanisms so that multiple users can use, but not access each others calendar information.
   - Would be nice to not have to worry about multiple users, but if one instance of Pluto is running, how will the gui tell which instance to connect to?
@@ -50,5 +48,6 @@ The databases are split in 3: dated events, backlog, and completed.
 
 ## Dependencies
 iCalendar
+xdg-base-dirs
 
 # Configuration
